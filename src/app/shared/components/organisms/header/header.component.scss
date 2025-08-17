@@ -1,0 +1,59 @@
+@use '../../../../../styles/variables.scss' as *;
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    width: 95%;
+    margin-top: 1rem;
+
+    app-search-bar{
+        width: 60%;
+        margin: 0px 20px;
+    }
+
+    .leftPart{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 56%;
+        min-width: 665px;
+    }
+
+    .rightPart{
+        display: flex;
+        justify-content: flex-end;
+        width: 42%;
+        margin-bottom: 10px;
+
+        .userOptions{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: fit-content;
+        }
+    }
+
+    .profile, .cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color;
+        text-decoration: none;
+        width: fit-content;
+        padding: 0px 6px;
+        font-size: $font-size-base;
+
+        lucide-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 6px;
+        }
+    }
+
+    .profile{
+        margin-right: 14px;
+    }
+}

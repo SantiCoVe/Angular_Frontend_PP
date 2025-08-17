@@ -1,0 +1,34 @@
+
+@use '../../../../../styles/variables.scss' as *;
+
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .icon-left,
+  .icon-right {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .icon-right {
+    margin-left: 8px;
+  }
+
+  .icon-left {
+    margin-right: 8px;
+  }
+}

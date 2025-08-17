@@ -1,0 +1,109 @@
+@use '../../../../../styles/variables.scss' as *;
+
+* {
+    font-family: $font-family-base;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 4px 8px;
+        margin: 0px 6px 0px 26px;
+        border-radius: 10px;
+        font-weight: 300;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: transparent;
+
+        lucide-icon {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    button:hover{
+        background-color: $hover-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        margin: 0px 8px;
+        width: max-content;
+        cursor: pointer;
+        gap: 1rem;
+        background-color: transparent;
+        padding: 4px 8px;
+        border-radius: 10px;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+        background-color: $hover-color;
+    }
+}
+
+.menuCategorias {
+    position: absolute;
+    top: 25px;
+    left: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    border: 1px solid gray;
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    &.hidden {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        margin: 0;
+        width: 100%;
+        border-radius: 8px;
+        transition: background-color 0.2s ease;
+        box-sizing: border-box;
+        cursor: pointer;
+        
+        lucide-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            padding-left: 12px;
+        }
+    }
+
+    p:hover {
+        background-color: lightgray;
+    }
+}

@@ -1,0 +1,72 @@
+@use '../../../../../styles/variables.scss' as *;
+
+* {
+  font-family: $font-family-base;
+}
+
+.containerFilter {
+  position: relative;
+  display: inline-block;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  lucide-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px;
+    color: black;
+  }
+}
+
+.optionsMenu {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  min-width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 2;
+
+  button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $tertiary-color;
+    }
+  }
+
+  &.haciaIzquierda {
+    left: auto;
+    right: 10px;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

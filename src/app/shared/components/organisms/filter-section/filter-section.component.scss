@@ -1,0 +1,31 @@
+@use '../../../../../styles/variables.scss' as *;
+
+.containerFilters{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 88%;
+    margin-top: 3.5rem;
+
+    .leftPart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+
+        app-filter-select{
+            padding: 2px 4px;
+            margin: 0px 4px;
+            border-radius: 10px;
+            background-color: $hover-color;
+            font-weight: 700;
+        }
+    }
+
+    .rightPart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+    }
+}

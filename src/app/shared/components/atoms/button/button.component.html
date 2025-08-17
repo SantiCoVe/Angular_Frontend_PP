@@ -1,0 +1,16 @@
+<button
+    [attr.type] = "type"
+    [disabled] = "disabled"
+    [ngClass] = "customClass"
+    class = "app-button"
+>
+    <ng-container *ngIf="iconName && iconPosition === 'left'">
+        <lucide-icon name="iconName" size="iconSize" class="icon-left"></lucide-icon>
+    </ng-container>
+
+    <ng-content></ng-content>
+
+    <ng-container *ngIf="iconName && iconPosition === 'right'">
+        <lucide-icon name="iconName" size="iconSize" class="icon-right"></lucide-icon>
+    </ng-container>
+</button>
