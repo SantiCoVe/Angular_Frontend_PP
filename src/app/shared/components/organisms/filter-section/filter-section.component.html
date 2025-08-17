@@ -1,0 +1,20 @@
+<div class="containerFilters">
+  <div class="leftPart">
+    <app-filter-select
+      *ngFor="let filtro of filtrosIzquierda"
+      [label]="filtro.label"
+      [options]="filtro.opciones"
+      (seleccion)="manejarSeleccion($event)">
+    </app-filter-select>
+  </div>
+
+  <div class="rightPart">
+    <app-filter-select
+      *ngFor="let filtro of filtrosDerecha; let isLast = last"
+      [label]="filtro.label"
+      [options]="filtro.opciones"
+      [esUltimo]="isLast"
+      (seleccion)="manejarSeleccion($event)">
+    </app-filter-select>
+  </div>
+</div>

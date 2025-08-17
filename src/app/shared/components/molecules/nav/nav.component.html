@@ -1,0 +1,18 @@
+<nav>
+    <button type="button" (click)="toggleCategorias()">
+        Categorías
+        <lucide-icon *ngIf="!mostrarMenuCategorias" name="chevron-down" [strokeWidth]="1" [size]="20"></lucide-icon>
+        <lucide-icon *ngIf="mostrarMenuCategorias" name="chevron-up" [strokeWidth]="1" [size]="20"></lucide-icon>
+    </button>
+
+    <a class="categorias" href="#">Ofertas</a>
+    <a class="categorias" href="#">Llegados esta semana</a>
+    <a class="categorias" href="#">Transportadoras</a>
+
+    <!-- Mostrar el menú solo si está activo -->
+    <div #menuCategorias class="menuCategorias" [class.visible]="mostrarMenuCategorias" [class.hidden]="!mostrarMenuCategorias">
+        <div>
+            <p *ngFor="let category of categoriesArray"> {{category}} <lucide-icon name="chevron-right" [strokeWidth]="1" [size]="20"></lucide-icon></p>
+        </div>
+    </div>
+</nav>

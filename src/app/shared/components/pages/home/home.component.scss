@@ -1,0 +1,23 @@
+@use '../../../../../styles/variables.scss' as *;
+
+.contentHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    app-header, app-first-section, app-filter-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .containerCards{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-top: 25px;
+    }
+}

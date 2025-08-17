@@ -1,0 +1,18 @@
+<div class="containerFilter">
+  <button (click)="toggleOpciones()" type="button" class="filterBtn">
+    {{ label }}
+    <lucide-icon [name]="mostrarOpciones ? 'chevron-up':'chevron-down'" [strokeWidth]="1.5" [size]="20"></lucide-icon>
+  </button>
+
+  <div 
+    #optionsMenu
+    class="optionsMenu"
+    [class.visible]="mostrarOpciones"
+    [class.hidden]="!mostrarOpciones"
+    [class.haciaIzquierda]="esUltimo"
+  >
+    <button type="button" *ngFor="let option of options" (click)="seleccionar(option)">
+      {{ option }}
+    </button>
+  </div>
+</div>
